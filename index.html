@@ -95,20 +95,6 @@
   nav a:hover { color: var(--text-main); background: #ffffff08; }
   nav a.active { color: var(--accent2); }
 
-  .nav-pill {
-    background: linear-gradient(135deg, #f59e0b, #ef4444);
-    color: #fff !important;
-    font-weight: 700 !important;
-    padding: .45rem 1.1rem !important;
-    border-radius: 30px !important;
-    display: flex; align-items: center; gap: .4rem;
-    animation: pulse-btn 2.5s ease-in-out infinite;
-  }
-  @keyframes pulse-btn {
-    0%,100% { box-shadow: 0 0 0 0 #f59e0b44; }
-    50%      { box-shadow: 0 0 0 8px #f59e0b00; }
-  }
-
   .header-right { display: flex; align-items: center; gap: .8rem; margin-left: auto; }
 
   .search-wrap {
@@ -133,11 +119,6 @@
     font-weight: 600; cursor: pointer; text-decoration: none;
     border: none; transition: all .2s; white-space: nowrap;
   }
-  .btn-primary {
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    color: #fff; box-shadow: 0 4px 20px #2563eb44;
-  }
-  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 28px #2563eb66; }
   .btn-outline {
     background: transparent; color: var(--text-sub);
     border: 1px solid var(--border);
@@ -486,7 +467,7 @@
     aside { display: none; }
     main  { padding: 1.5rem 1rem; }
     header { padding: 0 1rem; }
-    nav a:not(.nav-pill) { display: none; }
+    nav a { display: none; } /* Изменено, так как класс nav-pill был удален */
     .hero-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 600px) {
@@ -498,7 +479,6 @@
 </head>
 <body>
 
-<!-- ══ HEADER ══════════════════════════════════════════════════════ -->
 <header>
   <a href="#" class="logo">
     <div class="logo-icon">MB</div>
@@ -511,7 +491,6 @@
     <a href="#">Статьи</a>
     <a href="#">Партнёрка</a>
     <a href="#">FAQ</a>
-    <a href="#" class="nav-pill">🚀 Игровые режимы</a>
   </nav>
 
   <div class="header-right">
@@ -519,18 +498,11 @@
       <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <input type="text" placeholder="Поиск сайтов...">
     </div>
-    <a href="#" class="btn btn-outline">Войти</a>
-    <a href="#" class="btn btn-primary">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      Регистрация
-    </a>
   </div>
 </header>
 
-<!-- ══ PAGE BODY ═══════════════════════════════════════════════════ -->
 <div class="page">
 
-  <!-- SIDEBAR -->
   <aside>
     <div class="sidebar-label">Категории</div>
 
@@ -600,22 +572,18 @@
     </div>
   </aside>
 
-  <!-- MAIN -->
   <main>
-    <!-- breadcrumb -->
     <div class="breadcrumb">
       <a href="#">Главная</a> ›
       <a href="#">Топ сайты с халявой</a> ›
       <span>Сайты без депозита</span>
     </div>
 
-    <!-- title -->
     <div class="page-title-wrap">
       <div class="page-title">Сайты без депозита</div>
       <div class="page-subtitle">Проверенные площадки — получай скины и бонусы без вложений</div>
     </div>
 
-    <!-- HERO BANNERS -->
     <div class="hero-grid">
       <div class="hero-card hero-card-1">
         <div class="hero-emoji">📦</div>
@@ -671,7 +639,6 @@
       </div>
     </div>
 
-    <!-- STATS -->
     <div class="stats-bar">
       <div class="stat-card">
         <div class="stat-icon stat-icon-1">🏆</div>
@@ -703,7 +670,6 @@
       </div>
     </div>
 
-    <!-- FILTER -->
     <div class="filter-bar">
       <button class="filter-tab">Все</button>
       <button class="filter-tab active">Сайты без депозита</button>
@@ -713,7 +679,6 @@
       <button class="filter-tab">Steam игры</button>
     </div>
 
-    <!-- CARDS -->
     <div class="section-header">
       <div class="section-title">Топ площадки</div>
       <a href="#" class="btn btn-outline" style="font-size:.8rem; padding:.4rem .9rem;">Все сайты →</a>
@@ -721,7 +686,6 @@
 
     <div class="cards-grid">
 
-      <!-- Card 1 -->
       <div class="site-card">
         <div class="card-top">
           <div class="card-badges"><span class="badge badge-free">Бесплатный кейс</span></div>
@@ -741,7 +705,6 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
       <div class="site-card">
         <div class="card-top">
           <div class="card-badges">
@@ -766,7 +729,6 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
       <div class="site-card">
         <div class="card-top">
           <div class="card-reward">10₽</div>
@@ -786,7 +748,6 @@
         </div>
       </div>
 
-      <!-- Card 4 -->
       <div class="site-card">
         <div class="card-top">
           <div class="card-badges"><span class="badge badge-hot">HOT</span></div>
@@ -807,7 +768,6 @@
         </div>
       </div>
 
-      <!-- Card 5 -->
       <div class="site-card">
         <div class="card-top">
           <div class="card-reward">30₽</div>
@@ -827,7 +787,6 @@
         </div>
       </div>
 
-      <!-- Card 6 -->
       <div class="site-card">
         <div class="card-top">
           <div class="card-badges"><span class="badge badge-free">Бесплатные кейсы</span></div>
@@ -848,7 +807,6 @@
         </div>
       </div>
 
-      <!-- Card 7 -->
       <div class="site-card">
         <div class="card-top">
           <div class="card-reward">200₽</div>
@@ -868,7 +826,6 @@
         </div>
       </div>
 
-      <!-- Card 8 -->
       <div class="site-card">
         <div class="card-top">
           <div class="card-reward">50₽</div>
@@ -888,7 +845,6 @@
         </div>
       </div>
 
-      <!-- Card 9 -->
       <div class="site-card">
         <div class="card-top">
           <div class="card-reward">50₽</div>
@@ -908,7 +864,6 @@
         </div>
       </div>
 
-      <!-- Card 10 -->
       <div class="site-card">
         <div class="card-top">
           <div class="card-badges"><span class="badge badge-top">TOP</span></div>
@@ -929,14 +884,11 @@
         </div>
       </div>
 
-    </div><!-- /cards-grid -->
-
-    <div class="glow-line"></div>
+    </div><div class="glow-line"></div>
 
   </main>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div>
     © 2026 MyBonus.cc — Сайты с халявой CS2, RUST, DOTA2 и бесплатные скины.
