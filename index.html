@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PromoCS — Лучшие промокоды CS2 | Бонусы при регистрации</title>
+<meta name="description" content="Топ реферальные промокоды для CS2 кейс-сайтов. HellCase, DatDrop, Cases.gg и другие. Активируй промокод — получи бонус до +15% при пополнении.">
+<meta name="keywords" content="промокод cs2, hellcase промокод, datdrop промокод, бесплатные кейсы cs2, реферальный код cs2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #080b10;
+  --bg2: #0d1117;
+  --bg3: #131922;
+  --card: #0f1520;
+  --card-hover: #141c2a;
+  --border: rgba(255,255,255,0.06);
+  --border-active: rgba(255,255,255,0.12);
+  --gold: #f5c842;
+  --gold2: #ffd95a;
+  --gold-glow: rgba(245,200,66,0.15);
+  --gold-dim: rgba(245,200,66,0.08);
+  --cyan: #00d4ff;
+  --cyan-bg: rgba(0,212,255,0.08);
+  --green: #00e676;
+  --green-bg: rgba(0,230,118,0.08);
+  --red: #ff4757;
+  --text: #eef0f4;
+  --text2: #8a93a8;
+  --text3: #444d5f;
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* BG TEXTURE */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(245,200,66,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 110%, rgba(0,212,255,0.04) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,11,16,0.92);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 2px;
+  color: var(--text);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo em { color: var(--gold); font-style: normal; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text2);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.04); }
+
+.nav-cta {
+  background: var(--gold);
+  color: #0a0800 !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+}
+.nav-cta:hover { background: var(--gold2) !important; color: #0a0800 !important; }
+
+/* HERO */
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: 90px 32px 64px;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(245,200,66,0.2);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.hero-badge::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: blink 2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(52px, 8vw, 88px);
+  line-height: 0.95;
+  letter-spacing: 2px;
+  color: var(--text);
+  margin-bottom: 22px;
+}
+.hero h1 .accent { color: var(--gold); }
+.hero h1 .line2 { color: var(--text2); font-size: 0.65em; display: block; margin-top: 4px; }
+
+.hero-sub {
+  font-size: 17px;
+  color: var(--text2);
+  line-height: 1.65;
+  max-width: 520px;
+  margin: 0 auto 44px;
+  font-weight: 400;
+}
+
+.hero-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.hstat {
+  padding: 14px 28px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+.hstat:last-child { border-right: none; }
+.hstat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: var(--gold);
+  display: block;
+}
+.hstat-label {
+  font-size: 11px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 2px;
+  display: block;
+  font-weight: 500;
+}
+
+/* SECTION */
+.section {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px 80px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  color: var(--text);
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.2px;
+}
+.filter-btn:hover { border-color: var(--border-active); color: var(--text); }
+.filter-btn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #0a0800;
+}
+
+/* SORT */
+.sort-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.sort-label { font-size: 12px; color: var(--text3); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.sort-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.sort-btn:hover { color: var(--text); border-color: var(--border-active); }
+.sort-btn.active { border-color: var(--cyan); color: var(--cyan); }
+
+/* GRID */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 14px;
+}
+
+/* CARD */
+.promo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s, background 0.25s, transform 0.2s, box-shadow 0.25s;
+  animation: fadeUp 0.35s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.promo-card:hover {
+  border-color: rgba(245,200,66,0.2);
+  background: var(--card-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(245,200,66,0.08);
+}
+
+.card-glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--gold-glow);
+  filter: blur(40px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.promo-card:hover .card-glow { opacity: 1; }
+
+/* Card badges strip */
+.card-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.badge-hot { background: rgba(255,71,87,0.15); color: var(--red); border: 1px solid rgba(255,71,87,0.25); }
+.badge-new { background: var(--green-bg); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+.badge-top { background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(245,200,66,0.25); }
+.badge-free { background: var(--cyan-bg); color: var(--cyan); border: 1px solid rgba(0,212,255,0.25); }
+
+/* Card header */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.site-info { display: flex; align-items: center; gap: 13px; }
+.site-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: var(--gold);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.site-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.site-name-wrap {}
+.site-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+  display: block;
+  line-height: 1.2;
+}
+.site-type {
+  font-size: 12px;
+  color: var(--text3);
+  margin-top: 3px;
+  display: block;
+  font-weight: 500;
+}
+
+/* Rating */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.rating svg { width: 13px; height: 13px; fill: var(--gold); }
+
+/* Bonus block */
+.bonus-block {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+}
+.bonus-label {
+  font-size: 11px;
+  color: var(--text3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.bonus-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+.bonus-value strong { color: var(--gold); }
+
+/* Promo row */
+.promo-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.promo-box {
+  flex: 1;
+  background: var(--bg);
+  border: 1px dashed rgba(245,200,66,0.3);
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: var(--gold2);
+  user-select: all;
+  cursor: text;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.copy-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--gold-dim);
+  color: var(--gold);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 1px solid rgba(245,200,66,0.2);
+}
+.copy-btn:hover { background: var(--gold); color: #0a0800; }
+.copy-btn.copied { background: var(--green-bg); color: var(--green); border-color: rgba(0,230,118,0.3); }
+
+/* CTA button */
+.visit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.04);
+  color: var(--text2);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+.visit-btn:hover {
+  background: var(--gold);
+  color: #0a0800;
+  border-color: var(--gold);
+}
+.visit-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+/* Divider */
+.card-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 14px 0;
+}
+
+/* HOW IT WORKS */
+.how-section {
+  position: relative;
+  z-index: 1;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 32px;
+}
+.how-inner { max-width: 1180px; margin: 0 auto; }
+.how-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 48px;
+}
+.how-title span { color: var(--gold); }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  position: relative;
+}
+.step {
+  text-align: center;
+  padding: 28px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.2s;
+}
+.step:hover { border-color: rgba(245,200,66,0.2); }
+.step-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gold-dim);
+  border: 1px solid rgba(245,200,66,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: var(--gold);
+  margin: 0 auto 16px;
+}
+.step h3 {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.step p { font-size: 13px; color: var(--text3); line-height: 1.6; }
+
+/* FAQ MINI */
+.faq-section {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 72px 32px;
+}
+.faq-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 32px;
+}
+.faq-title span { color: var(--gold); }
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.faq-item.open { border-color: rgba(245,200,66,0.2); }
+.faq-q {
+  width: 100%;
+  background: var(--card);
+  border: none;
+  text-align: left;
+  padding: 16px 20px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.2s;
+}
+.faq-q:hover { background: var(--card-hover); }
+.faq-arrow { width: 16px; height: 16px; color: var(--text3); transition: transform 0.25s; flex-shrink: 0; }
+.faq-item.open .faq-arrow { transform: rotate(180deg); color: var(--gold); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s;
+  background: var(--card);
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.6;
+  padding: 0 20px;
+}
+.faq-item.open .faq-a { max-height: 200px; padding: 0 20px 16px; }
+
+/* FOOTER */
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 40px 32px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: var(--text);
+  display: block;
+  margin-bottom: 10px;
+}
+.footer-logo em { color: var(--gold); font-style: normal; }
+footer p { font-size: 13px; color: var(--text3); line-height: 1.7; }
+footer a { color: var(--text2); text-decoration: none; }
+footer a:hover { color: var(--gold); }
+.footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
+.footer-links a { font-size: 13px; }
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--green);
+  color: #001a0c;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 11px 24px;
+  border-radius: 100px;
+  z-index: 9999;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.toast::before { content: '✓'; font-size: 15px; }
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* EMPTY */
+.empty { text-align: center; padding: 60px 20px; color: var(--text3); }
+.empty-icon { font-size: 44px; margin-bottom: 12px; opacity: 0.5; }
+
+/* MOBILE */
+@media (max-width: 640px) {
+  nav { padding: 0 16px; }
+  .nav-links { display: none; }
+  .hero { padding: 56px 16px 40px; }
+  .section { padding: 0 16px 56px; }
+  .how-section { padding: 48px 16px; }
+  .faq-section { padding: 48px 16px; }
+  footer { padding: 32px 16px; }
+  .hero-stats { flex-direction: column; border-radius: 12px; width: 100%; }
+  .hstat { border-right: none; border-bottom: 1px solid var(--border); }
+  .hstat:last-child { border-bottom: none; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .promo-box { font-size: 15px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">PROMO<em>CS</em></a>
+  <ul class="nav-links">
+    <li><a href="#promos">Промокоды</a></li>
+    <li><a href="#how">Как использовать</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#promos" class="nav-cta">Получить бонус</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Обновлено — Апрель 2025</div>
+  <h1>
+    ПРОМОКОДЫ<br>
+    <span class="accent">ДЛЯ CS2</span>
+    <span class="line2">БОНУСЫ ПРИ РЕГИСТРАЦИИ</span>
+  </h1>
+  <p class="hero-sub">Собрали лучшие реферальные коды с проверенных кейс-сайтов. Вводи промокод при регистрации — получи бонус до +15% к депозиту или бесплатный кейс.</p>
+  <div class="hero-stats">
+    <div class="hstat">
+      <span class="hstat-num" id="stat-sites">0</span>
+      <span class="hstat-label">Сайтов</span>
+    </div>
+    <div class="hstat">
+      <span class="hstat-num" id="stat-promos">0</span>
+      <span class="hstat-label">Промокодов</span>
+    </div>
+    <div class="hstat">
+      <span class="hstat-num">+15%</span>
+      <span class="hstat-label">Макс. бонус</span>
+    </div>
+    <div class="hstat">
+      <span class="hstat-num">0₽</span>
+      <span class="hstat-label">Стоимость</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="promos">
+  <div class="section-head">
+    <span class="section-title">ВСЕ ПРОМОКОДЫ</span>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="free">Бесплатно</button>
+      <button class="filter-btn" data-filter="deposit">На депозит</button>
+      <button class="filter-btn" data-filter="cases">Кейсы</button>
+    </div>
+  </div>
+  <div class="sort-row">
+    <span class="sort-label">Сортировка:</span>
+    <button class="sort-btn active" data-sort="rating">По рейтингу</button>
+    <button class="sort-btn" data-sort="bonus">По бонусу</button>
+  </div>
+  <div class="cards-grid" id="cards-grid"></div>
+</section>
+
+<section class="how-section" id="how">
+  <div class="how-inner">
+    <h2 class="how-title">КАК <span>ПОЛУЧИТЬ БОНУС</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Выбери сайт</h3>
+        <p>Найди подходящий кейс-сайт в нашем каталоге и нажми «Перейти»</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Скопируй код</h3>
+        <p>Нажми кнопку «Копировать» — код автоматически попадёт в буфер обмена</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Зарегистрируйся</h3>
+        <p>Создай аккаунт на сайте и введи промокод при регистрации или в настройках</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Получи бонус</h3>
+        <p>Бонус начислится автоматически. Выводи скины или пополни баланс!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <h2 class="faq-title">ЧАСТО <span>ЗАДАВАЕМЫЕ</span> ВОПРОСЫ</h2>
+  <div id="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Промокоды действительно работают?
+        <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a">Да, все промокоды проверены и актуальны. Мы регулярно обновляем список и удаляем устаревшие коды. Если код не работает — напиши нам, мы обновим его в течение 24 часов.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Можно ли использовать промокод уже существующего аккаунта?
+        <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a">Зависит от сайта. Большинство промокодов работают только при первой регистрации. Некоторые сайты позволяют ввести код в разделе «Промокод» в настройках аккаунта в течение нескольких дней после регистрации.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Насколько безопасны эти сайты?
+        <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a">В каталог включены только проверенные площадки с хорошей репутацией. Тем не менее, помни: кейс-сайты — это развлечение, а не заработок. Играй ответственно и не вкладывай больше, чем готов потерять.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Как вы зарабатываете на этом сайте?
+        <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a">Сайт зарабатывает через реферальные программы. Когда ты регистрируешься по нашей ссылке и используешь промокод, сайт выплачивает нам небольшое вознаграждение. Для тебя это бесплатно — ты при этом ещё и получаешь бонус!</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">PROMO<em>CS</em></span>
+  <div class="footer-links">
+    <a href="#promos">Промокоды</a>
+    <a href="#how">Как использовать</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <p>Промокоды обновляются регулярно &nbsp;·&nbsp; Сайт зарабатывает через реферальные программы<br>
+  Все права защищены &copy; 2025 PromoCS &nbsp;·&nbsp; 18+ &nbsp;·&nbsp; Играй ответственно</p>
+</footer>
+
+<div class="toast" id="toast">Промокод скопирован!</div>
+
+<script>
+const promos = [
+  {
+    id: 1,
+    name: "HellCase",
+    short: "HC",
+    cat: ["cases","deposit"],
+    badges: ["top","hot"],
+    bonus: "+5% к первому пополнению",
+    highlight: "+5%",
+    code: "PROMOCS",
+    url: "https://hellcase.com/?ref=promocs", // замени на свой реферальный URL
+    rating: 4.9,
+    tag: "Кейс-сайт",
+    bonusNum: 5
+  },
+  {
+    id: 2,
+    name: "DatDrop",
+    short: "DD",
+    cat: ["free","cases"],
+    badges: ["new","free"],
+    bonus: "Бесплатный кейс при регистрации",
+    highlight: "Бесплатный кейс",
+    code: "PROMOCS",
+    url: "https://datdrop.com/?ref=promocs",
+    rating: 4.8,
+    tag: "Кейс-сайт",
+    bonusNum: 0
+  },
+  {
+    id: 3,
+    name: "Cases.gg",
+    short: "CG",
+    cat: ["deposit"],
+    badges: ["top","hot"],
+    bonus: "+10% к первому депозиту",
+    highlight: "+10%",
+    code: "PROMOCS",
+    url: "https://cases.gg/?ref=promocs",
+    rating: 4.9,
+    tag: "Кейс-сайт",
+    bonusNum: 10
+  },
+  {
+    id: 4,
+    name: "Farmskins",
+    short: "FS",
+    cat: ["free","cases"],
+    badges: ["new","free"],
+    bonus: "Бесплатный кейс + 1 монета",
+    highlight: "Бесплатно",
+    code: "PROMOCS",
+    url: "https://farmskins.com/?ref=promocs",
+    rating: 4.7,
+    tag: "Кейс-сайт",
+    bonusNum: 0
+  },
+  {
+    id: 5,
+    name: "Key-Drop",
+    short: "KD",
+    cat: ["deposit"],
+    badges: ["hot"],
+    bonus: "+15% к первому пополнению",
+    highlight: "+15%",
+    code: "PROMOCS",
+    url: "https://key-drop.com/?ref=promocs",
+    rating: 4.8,
+    tag: "Кейс-сайт",
+    bonusNum: 15
+  },
+  {
+    id: 6,
+    name: "Upgrskin",
+    short: "UP",
+    cat: ["cases"],
+    badges: ["new"],
+    bonus: "Апгрейд скинов + бонус к первому депозиту",
+    highlight: "Апгрейд скинов",
+    code: "PROMOCS",
+    url: "#",
+    rating: 4.6,
+    tag: "Апгрейд",
+    bonusNum: 5
+  }
+];
+
+const grid = document.getElementById('cards-grid');
+const toast = document.getElementById('toast');
+let activeFilter = 'all';
+let activeSort = 'rating';
+
+const badgeConfig = {
+  hot:  { cls: 'badge-hot',  label: '🔥 HOT' },
+  new:  { cls: 'badge-new',  label: 'NEW' },
+  top:  { cls: 'badge-top',  label: '⭐ ТОП' },
+  free: { cls: 'badge-free', label: 'БЕСПЛАТНО' },
+};
+
+function stars(n) {
+  const full = Math.round(n);
+  return `<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01z"/></svg>${n}`;
+}
+
+function renderCards() {
+  let data = [...promos];
+
+  if (activeFilter !== 'all') {
+    data = data.filter(p => p.cat.includes(activeFilter));
+  }
+
+  if (activeSort === 'bonus') {
+    data.sort((a,b) => b.bonusNum - a.bonusNum);
+  } else {
+    data.sort((a,b) => b.rating - a.rating);
+  }
+
+  grid.innerHTML = '';
+
+  if (!data.length) {
+    grid.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div><p>Промокодов по этому фильтру пока нет</p></div>';
+    return;
+  }
+
+  data.forEach((p, i) => {
+    const card = document.createElement('div');
+    card.className = 'promo-card';
+    card.style.animationDelay = (i * 0.05) + 's';
+
+    const badgesHtml = p.badges.map(b => {
+      const cfg = badgeConfig[b];
+      return cfg ? `<span class="badge ${cfg.cls}">${cfg.label}</span>` : '';
+    }).join('');
+
+    card.innerHTML = `
+      <div class="card-glow"></div>
+      <div class="card-badges">${badgesHtml}</div>
+      <div class="card-header">
+        <div class="site-info">
+          <div class="site-icon">${p.short}</div>
+          <div class="site-name-wrap">
+            <span class="site-name">${p.name}</span>
+            <span class="site-type">${p.tag} · CS2</span>
+          </div>
+        </div>
+        <div class="rating">${stars(p.rating)} ${p.rating}</div>
+      </div>
+      <div class="bonus-block">
+        <div class="bonus-label">Твой бонус</div>
+        <div class="bonus-value"><strong>${p.highlight}</strong> — ${p.bonus}</div>
+      </div>
+      <div class="promo-row">
+        <div class="promo-box">${p.code}</div>
+        <button class="copy-btn" data-code="${p.code}">Копировать</button>
+      </div>
+      <a href="${p.url}" class="visit-btn" target="_blank" rel="noopener noreferrer">
+        Перейти на сайт
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    `;
+    grid.appendChild(card);
+  });
+
+  grid.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(btn.dataset.code).then(() => {
+        btn.textContent = 'Скопировано!';
+        btn.classList.add('copied');
+        showToast();
+        setTimeout(() => {
+          btn.textContent = 'Копировать';
+          btn.classList.remove('copied');
+        }, 2200);
+      }).catch(() => {
+        // fallback
+        const ta = document.createElement('textarea');
+        ta.value = btn.dataset.code;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'Скопировано!';
+        btn.classList.add('copied');
+        showToast();
+        setTimeout(() => { btn.textContent = 'Копировать'; btn.classList.remove('copied'); }, 2200);
+      });
+    });
+  });
+
+  document.getElementById('stat-sites').textContent = promos.length;
+  document.getElementById('stat-promos').textContent = promos.length;
+}
+
+function showToast() {
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2400);
+}
+
+// Filters
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    renderCards();
+  });
+});
+
+// Sort
+document.querySelectorAll('.sort-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeSort = btn.dataset.sort;
+    renderCards();
+  });
+});
+
+// FAQ
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+renderCards();
+</script>
+</body>
+</html>
