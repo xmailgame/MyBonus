@@ -8,27 +8,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg-deep:    #080c14;
-    --bg-card:    #0d1422;
-    --bg-card2:   #111827;
-    --border:     #1e2d45;
-    --border-glow:#2563eb33;
-    --accent:     #2563eb;
-    --accent2:    #0ea5e9;
-    --accent-hot: #f59e0b;
+    /* Основные темные тона (стали чуть темнее для контраста с золотом) */
+    --bg-deep:    #05080f;
+    --bg-card:    #0a0e17;
+    --bg-card2:   #0d1320;
+    --border:     #1a263a;
+    
+    /* НОВАЯ ЖЕЛТАЯ/ЗОЛОТАЯ ЦВЕТОВАЯ СХЕМА */
+    --accent:     #f59e0b; /* Насыщенный желтый (основа) */
+    --accent2:    #fbbf24; /* Более светлый золотой (акценты) */
+    --accent-glow:#f59e0b22; /* Свечение */
+    
+    /* Стандартные цвета без изменений */
+    --accent-hot: #ef4444; /* Красный для HOT */
     --accent-new: #10b981;
     --accent-free:#8b5cf6;
     --text-main:  #e2e8f0;
-    --text-sub:   #7f93b0;
-    --text-dim:   #3d5070;
+    --text-sub:   #94a3b8; /* Чуть светлее для читаемости */
+    --text-dim:   #475569;
     --gold:       #fbbf24;
-    --red:        #ef4444;
     --radius:     12px;
     --radius-sm:  8px;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
+
   body {
     font-family: 'Exo 2', sans-serif;
     background: var(--bg-deep);
@@ -40,7 +45,7 @@
   body::before {
     content: '';
     position: fixed; inset: 0; z-index: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
     pointer-events: none;
   }
 
@@ -48,9 +53,10 @@
   ::-webkit-scrollbar-track { background: var(--bg-deep); }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
+  /* ─── HEADER (Желтые акценты) ───────────────────────── */
   header {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(8, 12, 20, 0.92);
+    background: rgba(5, 8, 15, 0.95);
     backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--border);
     padding: 0 2rem;
@@ -66,10 +72,12 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 18px; font-weight: 900;
     font-family: 'Rajdhani', sans-serif;
-    color: #fff; letter-spacing: -1px;
+    color: #000; /* Черный текст на желтом фоне */
+    letter-spacing: -1px;
+    box-shadow: 0 0 15px var(--accent-glow);
   }
   .logo-text { font-family: 'Rajdhani', sans-serif; font-size: 1.45rem; font-weight: 700; letter-spacing: 1px; color: #fff; }
-  .logo-text span { color: var(--accent2); }
+  .logo-text span { color: var(--accent); }
 
   nav { display: flex; align-items: center; gap: .25rem; flex: 1; }
   nav a {
@@ -77,12 +85,15 @@
     font-size: .85rem; font-weight: 500; letter-spacing: .4px;
     color: var(--text-sub);
     text-decoration: none; border-radius: var(--radius-sm);
-    transition: color .2s, background .2s;
+    transition: all 0.2s;
     white-space: nowrap;
   }
-  nav a:hover { color: var(--text-main); background: #ffffff08; }
+  nav a:hover { color: #fff; background: #ffffff05; }
+  nav a.active { color: var(--accent); background: rgba(245, 158, 11, 0.05); }
 
   .header-right { display: flex; align-items: center; gap: .8rem; margin-left: auto; }
+  
+  /* Желтые кнопки */
   .btn {
     display: inline-flex; align-items: center; gap: .45rem;
     padding: .5rem 1.2rem; border-radius: var(--radius-sm);
@@ -92,11 +103,14 @@
   }
   .btn-primary {
     background: linear-gradient(135deg, var(--accent), var(--accent2));
-    color: #fff; box-shadow: 0 4px 20px #2563eb44;
+    color: #000; /* Черный текст */
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
   }
+  .btn-primary:hover { box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35); transform: translateY(-1px); }
 
   .page { display: flex; min-height: calc(100vh - 64px); position: relative; z-index: 1; }
 
+  /* ─── SIDEBAR (Желтые акценты) ───────────────────────── */
   aside {
     width: 220px; flex-shrink: 0;
     background: var(--bg-card);
@@ -115,19 +129,22 @@
     font-size: .86rem; font-weight: 500;
     transition: all .18s;
   }
-  .slink:hover { background: #ffffff08; color: var(--text-main); }
-  .slink.active { background: #2563eb18; color: var(--accent2); }
+  .slink:hover { background: #ffffff05; color: #fff; }
+  .slink.active { background: rgba(245, 158, 11, 0.08); color: var(--accent); border: 1px solid rgba(245, 158, 11, 0.15); }
 
   main { flex: 1; padding: 2rem 2rem; max-width: 100%; overflow: hidden; }
 
   .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.1rem; }
   .section-title { font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; gap: .5rem; }
+  
+  /* Желтая полоска */
   .section-title::before { content: ''; width: 4px; height: 20px; border-radius: 2px; background: linear-gradient(to bottom, var(--accent), var(--accent2)); }
 
   .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
 
+  /* ─── КАРТОЧКИ (Желтые акценты) ───────────────────────── */
   .site-card {
-    background: var(--bg-card);
+    background: var(--bg-card2);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     overflow: hidden;
@@ -135,7 +152,7 @@
     display: flex; flex-direction: column;
     position: relative;
   }
-  .site-card:hover { border-color: #2563eb55; transform: translateY(-3px); box-shadow: 0 10px 35px #00000055; }
+  .site-card:hover { border-color: rgba(245, 158, 11, 0.3); transform: translateY(-3px); box-shadow: 0 10px 35px rgba(0,0,0,0.5); }
 
   .card-top {
     padding: 1.2rem 1rem .9rem;
@@ -143,39 +160,68 @@
     position: relative;
     border-bottom: 1px solid var(--border);
     min-height: 110px; justify-content: center;
-    background: linear-gradient(180deg, #0f1a2e 0%, var(--bg-card) 100%);
+    /* Убрали голубой градиент */
+    background: var(--bg-card);
   }
 
-  /* Стили для логотипов-картинок */
+  /* ЛОГОТИП ПОЛИГОН (Исправлено) */
   .card-logo img {
-    max-width: 140px;
-    max-height: 40px;
+    max-width: 160px; /* Увеличили */
+    max-height: 50px; /* Увеличили */
     display: block;
-    filter: drop-shadow(0 0 8px rgba(255,255,255,0.1));
+    object-fit: contain;
+    /* Красное свечение как на примере */
+    filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.5));
   }
   .card-logo { font-family: 'Rajdhani', sans-serif; font-size: 1.45rem; font-weight: 700; letter-spacing: 1px; }
 
+  /* Награда (Золотая) */
   .card-reward {
     position: absolute; top: .55rem; right: .55rem;
     font-family: 'Rajdhani', sans-serif; font-size: .8rem; font-weight: 700;
-    background: #ffffff12; border: 1px solid #ffffff1a;
-    padding: .2rem .5rem; border-radius: 5px; color: var(--gold);
+    background: rgba(251, 191, 36, 0.08); /* Чуть темнее фон */
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    padding: .25rem .6rem; border-radius: 5px; color: var(--gold);
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.1);
+  }
+
+  /* Красный HOT */
+  .badge-hot {
+    position: absolute; top: .55rem; left: .55rem;
+    font-size: .65rem; font-weight: 800; text-transform: uppercase;
+    background: var(--accent-hot); color: #fff;
+    padding: .25rem .6rem; border-radius: 4px;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
   }
 
   .card-body { padding: .85rem 1rem 1rem; flex: 1; display: flex; flex-direction: column; gap: .65rem; }
   .card-names { display: flex; align-items: center; justify-content: space-between; gap: .4rem; }
   .card-site-name { font-weight: 700; font-size: .9rem; }
+  
+  /* Желтый промокод */
   .card-promo {
     font-family: 'Rajdhani', sans-serif; font-size: .82rem; font-weight: 700;
-    color: var(--accent2); background: #0ea5e914; padding: .15rem .45rem; border-radius: 4px;
+    color: var(--accent2); background: rgba(245, 158, 11, 0.1); 
+    padding: .2rem .6rem; /* Увеличили отступы */
+    border-radius: 4px;
     cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
   }
+  .card-promo:hover { background: rgba(245, 158, 11, 0.18); border-color: rgba(245, 158, 11, 0.2); }
+
   .card-desc { font-size: .77rem; color: var(--text-sub); line-height: 1.45; }
   .card-actions { display: flex; gap: .5rem; margin-top: auto; }
-  .btn-sm { flex: 1; padding: .5rem .6rem; border-radius: var(--radius-sm); font-size: .78rem; font-weight: 600; text-align: center; text-decoration: none; border: none; }
-  .btn-go { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; }
+  .btn-sm { flex: 1; padding: .55rem .6rem; border-radius: var(--radius-sm); font-size: .78rem; font-weight: 600; text-align: center; text-decoration: none; border: none; transition: all 0.2s; }
+  
+  /* Золотая кнопка */
+  .btn-go {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #000;
+  }
+  .btn-go:hover { box-shadow: 0 0 15px rgba(245, 158, 11, 0.2); transform: translateY(-1px); }
 
-  footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 1.2rem 2rem; font-size: .78rem; color: var(--text-dim); }
+  footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 1.2rem 2rem; font-size: .78rem; color: var(--text-dim); text-align: center; }
 </style>
 </head>
 <body>
@@ -186,7 +232,7 @@
     <div class="logo-text">My<span>Bonus</span></div>
   </a>
   <nav>
-    <a href="#">Главная</a>
+    <a href="#" class="active">Главная</a>
     <a href="#">Магазин</a>
     <a href="#">FAQ</a>
   </nav>
@@ -208,25 +254,10 @@
     </div>
 
     <div class="cards-grid">
-      <div class="site-card" style="border-color: var(--accent2);">
-        <div class="card-top">
-          <div class="card-reward">+20%</div>
-          <div class="card-logo" style="color:var(--accent2)">🚀 MyCS2</div>
-        </div>
-        <div class="card-body">
-          <div class="card-names">
-            <span class="card-site-name">MyCS2</span>
-            <span class="card-promo">FRESKINS</span>
-          </div>
-          <div class="card-desc">Получи бонус к выплатам и скидку на услуги сервиса по коду.</div>
-          <div class="card-actions">
-            <a href="#" class="btn-sm btn-go">Активировать →</a>
-          </div>
-        </div>
-      </div>
 
       <div class="site-card">
         <div class="card-top">
+          <span class="badge badge-hot">HOT</span>
           <div class="card-reward">150₽</div>
           <div class="card-logo">
             <img src="images/csgopolygon.png" alt="CSGOPOLYGON">
@@ -244,36 +275,51 @@
         </div>
       </div>
 
-      <div class="site-card">
+      <div class="site-card" style="border-color: rgba(245, 158, 11, 0.4);">
         <div class="card-top">
-          <div class="card-logo" style="color:#5b9cf6">⚡ CSFAIL</div>
+          <div class="card-reward">+20%</div>
+          <div class="card-logo" style="color:var(--accent2); text-shadow: 0 0 10px var(--accent-glow)">🚀 MyCS2</div>
         </div>
         <div class="card-body">
           <div class="card-names">
-            <span class="card-site-name">CSFAIL</span>
+            <span class="card-site-name">MyCS2</span>
             <span class="card-promo">FRESKINS</span>
           </div>
-          <div class="card-desc">Открытие халявного кейса каждый день.</div>
+          <div class="card-desc">Получи бонус к выплатам и скидку на услуги сервиса по коду.</div>
           <div class="card-actions">
-            <a href="#" class="btn-sm btn-go">Перейти →</a>
+            <a href="#" class="btn-sm btn-go">Активировать →</a>
           </div>
         </div>
       </div>
+
     </div>
   </main>
 </div>
 
 <footer>
-  © 2026 MyBonus — Сайты с халявой CS2.
+  © 2026 MyBonus.cc — Лучшие сайты с халявой CS2.
 </footer>
 
 <script>
+  // ИСПРАВЛЕНО Скопировано влезает полностью
   document.querySelectorAll('.card-promo').forEach(el => {
     el.addEventListener('click', () => {
       navigator.clipboard.writeText(el.textContent);
       const orig = el.textContent;
-      el.textContent = '✓ Копи';
-      setTimeout(() => { el.textContent = orig; }, 1000);
+      
+      // Меняем текст, влезает полностью
+      el.textContent = '✓ Скопировано';
+      
+      // Перекрашиваем в зеленый на время
+      el.style.color = '#10b981';
+      el.style.background = 'rgba(16, 185, 129, 0.1)';
+      
+      setTimeout(() => {
+        el.textContent = orig;
+        // Возвращаем золотые цвета
+        el.style.color = '';
+        el.style.background = '';
+      }, 1200);
     });
   });
 </script>
